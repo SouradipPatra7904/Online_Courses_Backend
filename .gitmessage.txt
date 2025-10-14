@@ -1,0 +1,40 @@
+# ===========================
+# COMMIT MESSAGE TEMPLATE
+# Online_Courses_Backend Project
+# ===========================
+#
+# Format:
+#   Level <number> [<category>] : <message>
+#
+# Example:
+#   Level 1 [Services] : user-service implemented locally.
+#   Level 2 [Kafka] : added Kafka producer for course events.
+#   Level 3 [Monitoring] : integrated Prometheus and Micrometer.
+#   Level 4 [Docker] : added Dockerfile for all services.
+#   Level 5 [Integration] : prepared v1.0 release candidate.
+#
+# -----------------------------------------------
+# LEVEL GUIDE:
+# 1️⃣ Level 1 — Core Services Implementation
+# 2️⃣ Level 2 — Kafka & Event-Driven Architecture
+# 3️⃣ Level 3 — Monitoring & Observability (Micrometer, Prometheus, Grafana)
+# 4️⃣ Level 4 — DevOps & Infrastructure (Docker, Kubernetes, Jenkins, Nginx)
+# 5️⃣ Level 5 — Final Integration, Testing & Release
+# -----------------------------------------------
+#
+# CATEGORY GUIDE:
+# [Services]     — Core microservices (User, Course, Enrollment, etc.)
+# [Kafka]        — Messaging & Event Bus integration
+# [Monitoring]   — Metrics, Dashboards, Alerts
+# [Docker]       — Containerization setup
+# [Kubernetes]   — Deployment & Scaling configs
+# [CI/CD]        — Automation pipelines
+# [Integration]  — API Gateway, Postman, End-to-End testing
+# -----------------------------------------------
+#
+# Example Extended Format:
+# Level 2 [Kafka] : implemented event publishing for course creation. [event-driven]
+#
+# Keep commit messages concise and action-oriented.
+#
+# Lines starting with '#' are ignored.
