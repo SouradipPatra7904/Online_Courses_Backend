@@ -108,4 +108,40 @@ update_markdown() {
 
 update_markdown
 
+# =============================================================
+# 🔄 Inject progress section into README.md safely
+# =============================================================
+README_FILE="$ROOT_DIR/README.md"
+
+if [ -f "$README_FILE" ]; then
+  echo "🔄 Injecting live progress into README.md..."
+
+  # Extract relevant portion from PROGRESS_OUTLOOK.md
+  PROGRESS_CONTENT=$(awk '
+    /## 📦 Microservice Architecture Overview/ {flag=1}
+    /🗓️ \*\*Last Updated/ {print; flag=0}
+    flag
+  ' "$PROGRESS_FILE")
+
+  # Use a temporary file instead of trying to escape for sed
+  TMP_FILE=$(mktemp)
+  cp "$README_FILE" "$TMP_FILE"
+
+  # Replace the section between the markers using ed (safer for multi-line)
+  ed -s "$TMP_FILE" <<EOF
+/^<!-- AUTO-GENERATED: PROGRESS_START -->$/,/^<!-- AUTO-GENERATED: PROGRESS_END -->$/c
+<!-- AUTO-GENERATED: PROGRESS_START -->
+$PROGRESS_CONTENT
+<!-- AUTO-GENERATED: PROGRESS_END -->
+.
+w
+q
+EOF
+
+  mv "$TMP_FILE" "$README_FILE"
+  echo "✅ README.md updated with latest progress snapshot."
+else
+  echo "⚠️ README.md not found — skipping injection."
+fi
+
 echo -e "${GREEN}✅ PROGRESS_OUTLOOK.md updated successfully!${RESET}"
