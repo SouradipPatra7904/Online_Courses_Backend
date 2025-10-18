@@ -28,8 +28,9 @@ flowchart LR
 | Service | Port | Status |
 |----------|------|---------|
 | Gateway | 9601 | ⏳ Todo |
-| Enrollment | 9598 | ⏳ Todo |
-| Payment | 9599 | ⏳ Todo |
+| Infra | 9500 | ⏳ Todo |
+| Enrollment | 9598 | ✅ Done |
+| Payment | 9599 | ✅ Done |
 | Course | 9596 | ✅ Done |
 | Lesson | 9597 | ✅ Done |
 | Progress | 9600 | ✅ Done |
