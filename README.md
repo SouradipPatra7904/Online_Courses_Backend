@@ -3,8 +3,6 @@
 An advanced Spring Boot microservice-based backend for an online learning platform.
 
 ---
-
-<!-- AUTO-GENERATED: PROGRESS_START -->
 ## 📦 Microservice Architecture Overview
 ```mermaid
 flowchart LR
@@ -35,8 +33,5 @@ flowchart LR
 | Lesson | 9597 | ✅ Done |
 | Progress | 9600 | ✅ Done |
 | User | 9595 | ✅ Done |
-
-🗓️ **Last Updated:** 2025-10-16 16:32:10
-<!-- AUTO-GENERATED: PROGRESS_END -->
 
 ---
